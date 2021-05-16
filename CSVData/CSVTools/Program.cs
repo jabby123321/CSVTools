@@ -50,20 +50,7 @@ namespace CSVTools
 
             return result;
         }
-
-        public void Sort(int index)
-        {
-            if (Regex.IsMatch(content[1][index], "^[0-9]*[.][0-9]*$") || Regex.IsMatch(content[1][index], "^[0-9]"))
-            {
-                NumericSort(index);
-            }
-            else
-            {
-                AlphaSort(index);
-            }
-        }
-
-        private void AlphaSort(int index)
+        public void AlphaSort(int index)
         {
             List<List<int>> strVals = new List<List<int>> { };
             foreach (List<string> step in content)
@@ -148,10 +135,10 @@ namespace CSVTools
             
 
             int lena = content.Count;
-            for (int i = 0; i > lena; i++)
+            for (int i = 0; i < lena; i++)
             {
                 int lenb = lena - (i + 1);
-                for (int j = 0; j > lenb; j++)
+                for (int j = 0; j < lenb; j++)
                 {
                     List<string> temp;
                     List<int> temp2;
@@ -177,7 +164,7 @@ namespace CSVTools
             }
         }
 
-        private void NumericSort(int index)
+        public void NumericSort(int index)
         {
             int len = content.Count;
             List<String> temp;
@@ -208,7 +195,7 @@ namespace CSVTools
             file.CSVParse(path);
             Console.WriteLine(file.StringConv());
             Console.WriteLine("#################################");
-            file.Sort(0);
+            file.AlphaSort(0);
             Console.WriteLine(file.StringConv());
         }
     }
