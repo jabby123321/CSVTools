@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5644bm5KjPO3GFyH3ax1fZbaUKFwsb6uyOPIHcalzOJwZtez8bXUfuvvD9jo6bWZB7zaPtcJqa9p1RczYWjKpw==",
+  "dgSpecHash": "zn2TABBmc44biFJLQQ+TuITISsGLcVsamV1TbWuyTH4nH5secUBrr5jWQfJ1xVZ8aCDtR9jC/rofgD/vcE/5tg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jabby\\RiderProjects\\CSVData\\CSVTools\\CSVTools.csproj",
+  "projectFilePath": "C:\\Users\\jabby\\Documents\\GitHub\\CSSTools\\CSVData\\CSVTools\\CSVTools.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.app\\2.2.0\\microsoft.netcore.app.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnetapphost\\2.2.0\\microsoft.netcore.dotnetapphost.2.2.0.nupkg.sha512",

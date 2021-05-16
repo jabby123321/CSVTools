@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jabby\\RiderProjects\\CSVData\\CSVTools\\CSVTools.csproj",
+      "projectUniqueName": "C:\\Users\\jabby\\Documents\\GitHub\\CSSTools\\CSVData\\CSVTools\\CSVTools.csproj",
       "projectName": "CSVTools",
-      "projectPath": "C:\\Users\\jabby\\RiderProjects\\CSVData\\CSVTools\\CSVTools.csproj",
+      "projectPath": "C:\\Users\\jabby\\Documents\\GitHub\\CSSTools\\CSVData\\CSVTools\\CSVTools.csproj",
       "packagesPath": "C:\\Users\\jabby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jabby\\RiderProjects\\CSVData\\CSVTools\\obj\\",
+      "outputPath": "C:\\Users\\jabby\\Documents\\GitHub\\CSSTools\\CSVData\\CSVTools\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
