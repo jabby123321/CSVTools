@@ -36,19 +36,46 @@ namespace CSVDataClassLib
 
         public string StringConv()
         {
-            string result = "";
-            foreach (List<string> line in content)
+            int cols = content[0].Count;
+            int rows = content.Count;
+            List<int> colMaxes = new List<int> { };
+            for (int i = 0; i < cols; i++)
             {
-                foreach (string item in line)
+                int colMax = 0;
+                for (int j = 0; j < rows; j++)
                 {
-                    result += item + "       ";
+                    if (content[j][i].Length > colMax)
+                    {
+                        colMax = content[j][i].Length;
+                    }
                 }
-
-                result += "\n";
+                colMaxes.Add(colMax);
             }
 
-            return result;
+            string output = "";
+            int len = content.Count;
+            
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    int padding;
+                    bool extra = false;
+                    string rPaddingStr, lPaddingStr = "";
+                    float workPadding = (colMaxes[j] - content[i][j].Length +2) / 2f;
+                    padding = (int) Math.Floor(workPadding);
+                    if (content[i][j].Length % 2 != 0) { extra = true;}
+                    for (int k = 0; k < padding; k++) { lPaddingStr += " "; }
+                    if (extra) { rPaddingStr = lPaddingStr + " "; }
+                    else { rPaddingStr = lPaddingStr; }
+                    output += lPaddingStr + content[i][j] + rPaddingStr;
+                }
+                output += "\n";
+            }
+
+            return output;
         }
+        
         public void AlphaSort(int index)
         {
             List<List<int>> strVals = new List<List<int>> { };
@@ -130,7 +157,7 @@ namespace CSVDataClassLib
                     
                 }
                 strVals.Add(strValsStep);
-            }                                                                                                           // works to here
+            }
             
 
             int lena = content.Count;
