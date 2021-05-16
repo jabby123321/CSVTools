@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace CSVTools
+namespace CSVDataClassLib
 {
     public class CSVData
     {
@@ -206,22 +206,6 @@ namespace CSVTools
                     }
                 }
             }
-        }
-    }
-
-
-    class Program
-    {
-        public static void Main()
-        {
-            Console.Write("enter path of CSV file \n=>");
-            string path = Console.ReadLine();
-            CSVData file = new CSVData();
-            file.CSVParse(path);
-            Console.WriteLine(file.StringConv());
-            Console.WriteLine("#################################");
-            file.AlphaSort(0);
-            Console.WriteLine(file.StringConv());
         }
     }
 }
