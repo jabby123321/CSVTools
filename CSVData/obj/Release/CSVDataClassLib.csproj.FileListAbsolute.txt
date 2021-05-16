@@ -1,0 +1,6 @@
+C:\Users\jabby\Documents\GitHub\CSSTools\CSVData\bin\Release\CSVDataClassLib.dll
+C:\Users\jabby\Documents\GitHub\CSSTools\CSVData\bin\Release\CSVDataClassLib.pdb
+C:\Users\jabby\Documents\GitHub\CSSTools\CSVData\obj\Release\CSVDataClassLib.csprojAssemblyReference.cache
+C:\Users\jabby\Documents\GitHub\CSSTools\CSVData\obj\Release\CSVDataClassLib.csproj.CoreCompileInputs.cache
+C:\Users\jabby\Documents\GitHub\CSSTools\CSVData\obj\Release\CSVDataClassLib.dll
+C:\Users\jabby\Documents\GitHub\CSSTools\CSVData\obj\Release\CSVDataClassLib.pdb
