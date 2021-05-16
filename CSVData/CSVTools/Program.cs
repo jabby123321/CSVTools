@@ -135,30 +135,56 @@ namespace CSVTools
             
 
             int lena = content.Count;
-            for (int i = 0; i < lena; i++)
+            for (int i = 1; i < lena; i++)
             {
-                int lenb = lena - (i + 1);
-                for (int j = 0; j < lenb; j++)
+                int lenb = lena - (i);
+                for (int j = 1; j < lenb; j++)
                 {
                     List<string> temp;
                     List<int> temp2;
                     int lenc;
-                    if (strVals[j].Count < strVals[j + 1].Count) { lenc = strVals[j].Count; }
-                    else { lenc = strVals[j+1].Count; }
+                    bool size;
+                    if (strVals[j].Count < strVals[j + 1].Count)
+                    {
+                        lenc = strVals[j].Count;
+                        size = false;
+                    }
+                    else
+                    {
+                        lenc = strVals[j+1].Count;
+                        size = true;
+                    }
 
                     for (int k = 0; k < lenc; k++)
                     {
                         if (strVals[j][k] > strVals[j + 1][k])
                         {
+                            Console.WriteLine(strVals[j][k].ToString() + ">" + strVals[j+1][k] + "  so swapping them");
                             temp = content[j + 1];
                             temp2 = strVals[j + 1];
                             content[j + 1] = content[j];
-                            strVals[j + 1] = strVals[j + 1];
+                            strVals[j + 1] = strVals[j];
                             content[j] = temp;
                             strVals[j] = temp2;
                             k = lenc;
+                            size = false;
                         }
-                        else if(strVals[j][k] < strVals[j + 1][k]) { k = lenc; }
+                        else if (strVals[j][k] < strVals[j + 1][k])
+                        {
+                            Console.WriteLine(strVals[j][k].ToString() + "<" + strVals[j+1][k] + "  so not swapping them");
+                            k = lenc;
+                            size = false;
+                        }
+                    }
+
+                    if (size)
+                    {
+                        temp = content[j + 1];
+                        temp2 = strVals[j + 1];
+                        content[j + 1] = content[j];
+                        strVals[j + 1] = strVals[j];
+                        content[j] = temp;
+                        strVals[j] = temp2;
                     }
                 }
             }
@@ -168,7 +194,7 @@ namespace CSVTools
         {
             int len = content.Count;
             List<String> temp;
-            for (int i = 0; i < len; i++)
+            for (int i = 1; i < len; i++)
             {
                 int nel = len - (i + 1);
                 for (int j = 0; j < nel; j++)
