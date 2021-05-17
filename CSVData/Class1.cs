@@ -185,7 +185,6 @@ namespace CSVDataClassLib
                     {
                         if (strVals[j][k] > strVals[j + 1][k])
                         {
-                            Console.WriteLine(strVals[j][k].ToString() + ">" + strVals[j+1][k] + "  so swapping them");
                             temp = content[j + 1];
                             temp2 = strVals[j + 1];
                             content[j + 1] = content[j];
@@ -197,7 +196,6 @@ namespace CSVDataClassLib
                         }
                         else if (strVals[j][k] < strVals[j + 1][k])
                         {
-                            Console.WriteLine(strVals[j][k].ToString() + "<" + strVals[j+1][k] + "  so not swapping them");
                             k = lenc;
                             size = false;
                         }
